@@ -1,12 +1,33 @@
-# React + Vite
+# 🪙 Crypto Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crypto Tracker is a responsive React + Redux Toolkit application that simulates real-time crypto price tracking. It mimics live updates like CoinMarketCap using mock WebSocket behavior and Redux state management.
 
-Currently, two official plugins are available:
+## 🎯 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📊 Real-time updates of 5 crypto assets (BTC, ETH, USDT, etc.)
+- 🔄 Simulated WebSocket using `setInterval` to randomly change price, % change, and 24h volume
+- 💹 Responsive UI with a data table on desktop and stacked cards on mobile
+- 🎨 Color-coded % changes (green = positive, red = negative)
+- 📈 7-day static sparkline chart for each asset
+- 🌐 All state managed via Redux Toolkit (no local state)
+- ⚡ Optimized with selectors to prevent unnecessary re-renders
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **React** – UI library
+- **Redux Toolkit** – State management
+- **Bootstrap CSS** – Utility-first styling
+
+---
+
+## 📐 Architecture
+
+```text
+src/
+├── assets/              # Logos and static chart images
+├── components/          # Table, Nabar,
+├── Redux/               # Redux slice, selectors, mock service
+└── App.jsx              # Main layout + routing
+```
